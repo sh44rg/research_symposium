@@ -727,6 +727,12 @@
       object-position: top;
     }
 
+    .speaker-img-wrap img.no-crop {
+      object-fit: contain;
+      object-position: center;
+      background: var(--bg);
+    }
+
     .speaker-track-bar {
       position: absolute;
       bottom: 0;
@@ -782,9 +788,11 @@
       color: #fff;
     }
     .speaker-domain.ai { background: var(--tag-ai); }
-    .speaker-domain.sys { background: var(--tag-sys); }
+    .speaker-domain.sys { background: var(--
+      tag-sys); }
     .speaker-domain.theory { background: var(--tag-theory); }
     .speaker-domain.hci { background: var(--tag-hci); }
+    .speaker-domain.general { background: var(--muted); }
 
     .speaker-link {
       font-size: 0.78rem;
@@ -792,6 +800,17 @@
       display: flex;
       align-items: center;
       gap: 0.3rem;
+    }
+
+    .speaker-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e9e6df 0%, #f6f4ef 100%);
+      color: var(--border);
+      font-size: 2.75rem;
     }
 
     /* ─── GALLERY ──────────────────────────────────────────────────── */
@@ -875,9 +894,6 @@
       line-height: 1.7;
       margin-bottom: 1.5rem;
     }
-
-    /* ─── MERCH ────────────────────────────────────────────────────── */
-    #merch { background: var(--bg); }
 
     /* ─── FEEDBACK ─────────────────────────────────────────────────── */
     #feedback {
@@ -1001,7 +1017,6 @@
       .domains-grid { grid-template-columns: 1fr; }
       .speakers-grid { grid-template-columns: repeat(2, 1fr); }
       /* .gallery-grid { grid-template-columns: repeat(2, 1fr); } */
-      #merch > .container > div { grid-template-columns: 1fr !important; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
 
       .nav-links { display: none; }
@@ -1053,7 +1068,6 @@
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#speakers">Speakers</a></li>
         <!-- <li><a href="#gallery">Gallery</a></li> -->
-        <li><a href="#merch">Perks</a></li>
         <li><a href="#registration" class="nav-cta">Register</a></li>
       </ul>
 
@@ -1085,7 +1099,7 @@
           </div>
           <div class="hero-meta-item">
             <i class="fa-solid fa-location-dot"></i>
-            <span>Lecture Hall Complex, IIT Delhi, Hauz Khas, New Delhi</span>
+            <span>LH114, Lecture Hall Complex, IIT Delhi (Food: LH114 Foyer)</span>
           </div>
         </div>
 
@@ -1148,7 +1162,7 @@
           <div class="info-pill-icon"><i class="fa-solid fa-users"></i></div>
           <div class="info-pill-text">
             <strong>Who it is for</strong>
-            <span>Students (B.Tech, M.Tech, PhD) &amp; Faculty at IIT Delhi</span>
+            <span>Open to CSE students only across all years and programmes</span>
           </div>
         </div>
         <div class="info-pill">
@@ -1259,16 +1273,135 @@
       <button class="schedule-tab" onclick="switchDay(1, this)">Day 2 — April 5</button>
     </div>
 
-    <div class="schedule-day active" style="display: block; padding: 2rem 0;">
-        <div class="form-card text-center" style="border-style: dashed; background: rgba(27, 58, 107, 0.02);">
-            <i class="fa-regular fa-calendar-check" style="font-size: 2.5rem; color: var(--navy); margin-bottom: 1rem;"></i>
-            <h3 style="font-family: var(--serif); font-size: 1.5rem; color: var(--navy); margin-bottom: 0.5rem;">Detailed Schedule Coming Soon</h3>
-            <p style="font-size: 1rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;">
-                Talks — Meals — Keynotes — Posters
-            </p>
+    <div class="schedule-day active">
+      <div class="schedule-date-banner">
+        <div class="sched-date-num">04</div>
+        <div class="sched-date-info">
+          <strong>Saturday · April 4, 2026</strong>
+          <span>Venue: LH114, Lecture Hall Complex</span>
         </div>
+      </div>
+
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Session</th>
+            <th style="text-align:right">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sched-time">10:00 AM - 10:10 AM</td>
+            <td><div class="sched-event-name">Opening Remarks</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">10:10 AM - 11:15 AM</td>
+            <td><div class="sched-event-name">Dr. Jyothi Krishnan</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">11:15 AM - 11:45 AM</td>
+            <td><div class="sched-event-name">Coffee Break</div></td>
+            <td class="sched-venue">LH114 Foyer</td>
+          </tr>
+          <tr>
+            <td class="sched-time">11:45 AM - 12:30 PM</td>
+            <td><div class="sched-event-name">Dr. Abhilash Jindal</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">12:30 PM - 2:00 PM</td>
+            <td><div class="sched-event-name">Lunch</div></td>
+            <td class="sched-venue">LH114 Foyer</td>
+          </tr>
+          <tr>
+            <td class="sched-time">2:00 PM - 3:00 PM</td>
+            <td><div class="sched-event-name">Dr. Vaishnavi Sundararajan</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">3:00 PM - 3:30 PM</td>
+            <td><div class="sched-event-name">Student Presentation</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">3:30 PM - 4:00 PM</td>
+            <td><div class="sched-event-name">Coffee</div></td>
+            <td class="sched-venue">LH114 Foyer</td>
+          </tr>
+          <tr>
+            <td class="sched-time">4:00 PM - 5:00 PM</td>
+            <td><div class="sched-event-name">Student Presentation</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">5:00 PM onwards</td>
+            <td><div class="sched-event-name">Posters</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div class="schedule-day">
+      <div class="schedule-date-banner">
+        <div class="sched-date-num">05</div>
+        <div class="sched-date-info">
+          <strong>Sunday · April 5, 2026</strong>
+          <span>Venue: LH114, Lecture Hall Complex</span>
+        </div>
+      </div>
+
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Session</th>
+            <th style="text-align:right">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sched-time">10:00 AM - 11:00 AM</td>
+            <td><div class="sched-event-name">Dr. Arkaprava Basu</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">11:00 AM - 11:30 AM</td>
+            <td><div class="sched-event-name">Coffee</div></td>
+            <td class="sched-venue">LH114 Foyer</td>
+          </tr>
+          <tr>
+            <td class="sched-time">11:30 AM - 12:15 PM</td>
+            <td><div class="sched-event-name">Dr. Kolin Paul</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">12:15 PM - 1:00 PM</td>
+            <td><div class="sched-event-name">Dr. Sorav Bansal</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">1:00 PM - 2:30 PM</td>
+            <td><div class="sched-event-name">Lunch</div></td>
+            <td class="sched-venue">LH114 Foyer</td>
+          </tr>
+          <tr>
+            <td class="sched-time">2:30 PM - 4:00 PM</td>
+            <td><div class="sched-event-name">Quiz</div></td>
+            <td class="sched-venue">LH114</td>
+          </tr>
+          <tr>
+            <td class="sched-time">4:00 PM - 4:30 PM</td>
+            <td><div class="sched-event-name">Closing + Awards, Coffee</div></td>
+            <td class="sched-venue">LH114 Foyer</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </section>
 
 <section id="speakers">
@@ -1282,13 +1415,13 @@
 
       <a href="https://www.csa.iisc.ac.in/~arkapravab/" target="_blank" class="speaker-card">
         <div class="speaker-img-wrap">
-          <img src="Arka.jpg" alt="Arkaprava Basu" />
+          <img src="Arka.jpg" alt="Arkaprava Basu" class="no-crop" />
           <div class="speaker-track-bar sys"></div>
         </div>
         <div class="speaker-body">
           <div class="speaker-name">Dr. Arkaprava Basu</div>
-          <div class="speaker-title">Dept. of Computer Science and Automation, IISc Bengaluru</div>
-          <div class="speaker-bio">Specializing in Computer Architecture and Systems. Leads the Computer Systems Lab (CSL) at IISc.</div>
+          <div class="speaker-title">Associate Professor, IISc Bengaluru</div>
+          <div class="speaker-bio">Leads the Computer Systems Lab at IISc; works on memory management across OS and architecture boundaries (GPU/CPU), software reliability, and security.</div>
           <div class="speaker-footer">
             <span class="speaker-domain sys">Systems</span>
             <span class="speaker-link">IISc Profile <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem"></i></span>
@@ -1296,35 +1429,101 @@
         </div>
       </a>
 
-      <a href="https://iitgn.ac.in/faculty/cse/fac-jyothi" target="_blank" class="speaker-card">
+      <a href="https://www.cse.iitd.ac.in/~srikanta/" target="_blank" class="speaker-card">
         <div class="speaker-img-wrap">
-          <img src="jyothi.jpg" alt="Jyothi Krishnan" />
+          <img src="srikanta.png" alt="Srikanta Bedathur" class="no-crop" />
           <div class="speaker-track-bar sys"></div>
         </div>
         <div class="speaker-body">
-          <div class="speaker-name">Dr. Jyothi Krishnan</div>
-          <div class="speaker-title">Assistant Professor, CSE, IIT Gandhinagar</div>
-          <div class="speaker-bio">Expertise in Compilers, Program Analysis, and Software Engineering. Contributing to robust system design.</div>
+          <div class="speaker-name">Dr. Srikanta Bedathur</div>
+          <div class="speaker-title">Professor and DS Chair of AI, CSE, IIT Delhi</div>
+          <div class="speaker-bio">Research interests include temporal information modeling, graph data mining and management, information retrieval, and knowledge-base infrastructure.</div>
           <div class="speaker-footer">
-            <span class="speaker-domain sys">Systems/Theory</span>
+            <span class="speaker-domain sys">Systems</span>
+            <span class="speaker-link">IITD Profile <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://iitgn.ac.in/faculty/cse/fac-jyothi" target="_blank" class="speaker-card">
+        <div class="speaker-img-wrap">
+          <img src="jyothi.jpg" alt="Jyothi Krishnan" />
+          <div class="speaker-track-bar hci"></div>
+        </div>
+        <div class="speaker-body">
+          <div class="speaker-name">Dr. Jyothi Krishnan</div>
+          <div class="speaker-title">Assistant Teaching Professor, CSE, IIT Gandhinagar</div>
+          <div class="speaker-bio">Works at the intersection of mathematics education and game design, with interests in mathematical games, board games, and school mathematics through games.</div>
+          <div class="speaker-footer">
+            <span class="speaker-domain hci">Game Design</span>
             <span class="speaker-link">IITGN Profile <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem"></i></span>
           </div>
         </div>
       </a>
 
-      <div class="speaker-card" style="cursor: default;">
-        <div class="speaker-img-wrap" style="background: linear-gradient(135deg, #e9e6df 0%, #f6f4ef 100%); display: flex; align-items: center; justify-content: center;">
-            <i class="fa-solid fa-user-tie" style="font-size: 3rem; color: var(--border);"></i>
+      <a href="https://abhilash-jindal.com/" target="_blank" class="speaker-card">
+        <div class="speaker-img-wrap">
+          <img src="abhilash.png" alt="Abhilash Jindal" class="no-crop" />
+          <div class="speaker-track-bar theory"></div>
         </div>
         <div class="speaker-body">
-          <div class="speaker-name">Institute Faculty</div>
-          <div class="speaker-title">IIT Delhi</div>
-          <div class="speaker-bio">Faculty presenters from our department will be revealed shortly.</div>
+          <div class="speaker-name">Dr. Abhilash Jindal</div>
+          <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
+          <div class="speaker-bio">Broadly interested in systems, with research spanning system design, performance, and energy-aware computing.</div>
           <div class="speaker-footer">
-            <span class="speaker-domain general" style="background: var(--muted);">TBC Soon</span>
+            <span class="speaker-domain theory">Speaker</span>
+            <span class="speaker-link">Faculty Profile</span>
           </div>
         </div>
-      </div>
+      </a>
+
+      <a href="https://vaishs.github.io/" target="_blank" class="speaker-card">
+        <div class="speaker-img-wrap">
+          <img src="vaishnavi.jpg" alt="Vaishnavi Sundararajan" class="no-crop" />
+          <div class="speaker-track-bar hci"></div>
+        </div>
+        <div class="speaker-body">
+          <div class="speaker-name">Dr. Vaishnavi Sundararajan</div>
+          <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
+          <div class="speaker-bio">Works on applying formal methods and logic to security, including formal modeling and verification of security protocols.</div>
+          <div class="speaker-footer">
+            <span class="speaker-domain hci">Speaker</span>
+            <span class="speaker-link">Faculty Profile</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.cse.iitd.ac.in/~kolin/" target="_blank" class="speaker-card">
+        <div class="speaker-img-wrap">
+          <img src="kolin.jpg" alt="Kolin Paul" class="no-crop" />
+          <div class="speaker-track-bar sys"></div>
+        </div>
+        <div class="speaker-body">
+          <div class="speaker-name">Dr. Kolin Paul</div>
+          <div class="speaker-title">Professor, Computer Science and Engineering, IIT Delhi</div>
+          <div class="speaker-bio">Research focuses on embedded heterogeneous systems (GPU/CPU/FPGA), high-performance accelerators for HPC, cyber-physical systems security, and quantum computing.</div>
+          <div class="speaker-footer">
+            <span class="speaker-domain sys">Professor</span>
+            <span class="speaker-link">IITD Profile <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.cse.iitd.ac.in/~sbansal/" target="_blank" class="speaker-card">
+        <div class="speaker-img-wrap">
+          <img src="sorav.jpg" alt="Sorav Bansal" class="no-crop" />
+          <div class="speaker-track-bar sys"></div>
+        </div>
+        <div class="speaker-body">
+          <div class="speaker-name">Dr. Sorav Bansal</div>
+          <div class="speaker-title">Professor, Department of Computer Science, IIT Delhi</div>
+          <div class="speaker-bio">Works on program superoptimization and AI-based compiler optimization; currently on long leave from IIT Delhi working on compiler optimization at Graviton Research Capital.</div>
+          <div class="speaker-footer">
+            <span class="speaker-domain sys">Professor</span>
+            <span class="speaker-link">IITD Profile <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem"></i></span>
+          </div>
+        </div>
+      </a>
 
     </div>
   </div>
@@ -1356,7 +1555,7 @@
     <p class="section-label" style="text-align:center">Join Us</p>
     <h2 class="section-title" style="text-align:center">Register for the Symposium</h2>
     <div class="divider" style="margin:1rem auto 1rem"></div>
-    <p class="section-sub center" style="text-align:center;margin:0 auto 2.5rem">Open to all IIT Delhi students — B.Tech, M.Tech, and PhD/MSR. Registration is free and covers both days including all sessions, lunch, and the poster exhibition.</p>
+    <p class="section-sub center" style="text-align:center;margin:0 auto 2.5rem">Open to CSE students only. Registration is free and covers both days including all sessions, lunch, coffee, and the poster exhibition.</p>
 
     <div class="reg-grid">
       <div class="reg-info">
@@ -1375,39 +1574,6 @@
           Proceed to Form <i class="fa-solid fa-arrow-right" style="margin-left:0.5rem;font-size:0.8rem;"></i>
         </a>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="merch" style="background:var(--navy);padding:4rem 0">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
-
-      <div>
-        <p class="section-label" style="color:rgba(255,255,255,0.5)">Perks</p>
-        <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,2.75rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1rem">
-          More than just<br>good talks.
-        </h2>
-        <div style="width:3rem;height:3px;background:var(--red);margin-bottom:1.5rem"></div>
-        <p style="font-size:1rem;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:1.75rem">
-          Show up, stay curious, and leave with more than you came with — ideas, connections, and a few things to remember the weekend by.
-        </p>
-        <div style="display:flex;flex-wrap:wrap;gap:0.65rem">
-          <span style="font-size:0.82rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:rgba(255,255,255,0.75)">Goodies</span>
-          <span style="font-size:0.82rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:rgba(255,255,255,0.75)">Meals &amp; Tea</span>
-          <span style="font-size:0.82rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:rgba(255,255,255,0.75)">Networking</span>
-          <span style="font-size:0.82rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:rgba(255,255,255,0.75)">Research Ideas</span>
-          <span style="font-size:0.82rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:4px;color:rgba(255,255,255,0.75)">Faculty Access</span>
-        </div>
-      </div>
-
-      <div style="display:flex;justify-content:center">
-        <div style="background:linear-gradient(135deg, #2a5298, #1B3A6B);border:1px solid rgba(255,255,255,0.12);border-radius:10px;overflow:hidden;max-width:340px;width:100%;min-height:280px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;">
-          <i class="fa-solid fa-gift" style="font-size:3rem;color:rgba(255,255,255,0.4)"></i>
-          <span style="font-size:0.85rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Design Reveal Coming Soon</span>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1446,7 +1612,15 @@
         <div class="footer-brand-name">CSE Research Symposium '26</div>
         <div class="footer-brand-sub">
           Organised by the Department of Computer Science &amp; Engineering, IIT Delhi in association with the ACES-ACM Student Chapter.<br /><br />
-          Lecture Hall Complex, IIT Delhi, Hauz Khas, New Delhi – 110016.
+          Venue: LH114, Lecture Hall Complex, IIT Delhi, Hauz Khas, New Delhi - 110016.<br />
+          Food and coffee service: LH114 Foyer.
+        </div>
+        <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.6rem">
+          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Goodies</span>
+          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Meals &amp; Tea</span>
+          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Networking</span>
+          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Research Ideas</span>
+          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Faculty Access</span>
         </div>
       </div>
 
