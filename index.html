@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,30 +8,43 @@
   <link rel="icon" type="image/jpeg" href="cse-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
   <style>
     /* ─── RESET & BASE ─────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
     :root {
-      --bg:         #F6F4EF;
-      --surface:    #FFFFFF;
-      --navy:       #1B3A6B;
+      --bg: #F6F4EF;
+      --surface: #FFFFFF;
+      --navy: #1B3A6B;
       --navy-light: #2a5298;
-      --red:        #B5281C;
-      --ink:        #1C1C1E;
-      --ink-2:      #3A3A3C;
-      --muted:      #6B6B70;
-      --border:     #D8D5CE;
-      --border-lt:  #EAE8E2;
-      --tag-ai:     #1B3A6B;
-      --tag-sys:    #6B3A1B;
+      --red: #B5281C;
+      --ink: #1C1C1E;
+      --ink-2: #3A3A3C;
+      --muted: #6B6B70;
+      --border: #D8D5CE;
+      --border-lt: #EAE8E2;
+      --tag-ai: #1B3A6B;
+      --tag-sys: #6B3A1B;
       --tag-theory: #1B5E3B;
-      --tag-hci:    #5C1B6B;
-      --serif:      'EB Garamond', Georgia, serif;
-      --sans:       'Inter', system-ui, sans-serif;
+      --tag-hci: #5C1B6B;
+      --serif: 'EB Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
     }
 
     body {
@@ -41,10 +55,25 @@
       line-height: 1.65;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; }
-    section { padding: 5rem 0; }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
     .section-label {
       font-family: var(--sans);
@@ -91,7 +120,9 @@
       transition: box-shadow 0.2s;
     }
 
-    #navbar.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    #navbar.scrolled {
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
 
     .nav-inner {
       display: flex;
@@ -142,7 +173,10 @@
       transition: background 0.15s, color 0.15s;
     }
 
-    .nav-links a:hover { background: var(--border-lt); color: var(--navy); }
+    .nav-links a:hover {
+      background: var(--border-lt);
+      color: var(--navy);
+    }
 
     .nav-cta {
       background: var(--navy) !important;
@@ -150,7 +184,10 @@
       padding: 0.4rem 1rem !important;
       border-radius: 4px;
     }
-    .nav-cta:hover { background: var(--navy-light) !important; }
+
+    .nav-cta:hover {
+      background: var(--navy-light) !important;
+    }
 
     .nav-hamburger {
       display: none;
@@ -159,8 +196,10 @@
       cursor: pointer;
       padding: 4px;
     }
+
     .nav-hamburger span {
-      width: 22px; height: 2px;
+      width: 22px;
+      height: 2px;
       background: var(--ink);
       display: block;
       border-radius: 2px;
@@ -189,8 +228,8 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--red);
-      background: rgba(181,40,28,0.07);
-      border: 1px solid rgba(181,40,28,0.2);
+      background: rgba(181, 40, 28, 0.07);
+      border: 1px solid rgba(181, 40, 28, 0.2);
       padding: 0.3rem 0.8rem;
       border-radius: 3px;
       margin-bottom: 1.5rem;
@@ -258,14 +297,21 @@
       background: var(--navy);
       color: #fff;
     }
-    .btn-primary:hover { background: var(--navy-light); }
+
+    .btn-primary:hover {
+      background: var(--navy-light);
+    }
 
     .btn-outline {
       background: transparent;
       color: var(--navy);
       border: 1.5px solid var(--navy);
     }
-    .btn-outline:hover { background: var(--navy); color: #fff; }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: #fff;
+    }
 
     .hero-visual {
       position: relative;
@@ -309,7 +355,10 @@
       text-align: center;
       border-right: 1px solid var(--border-lt);
     }
-    .hero-stat:last-child { border-right: none; }
+
+    .hero-stat:last-child {
+      border-right: none;
+    }
 
     .hero-stat-num {
       font-family: var(--serif);
@@ -347,7 +396,9 @@
       line-height: 1.8;
     }
 
-    .about-body p + p { margin-top: 1rem; }
+    .about-body p+p {
+      margin-top: 1rem;
+    }
 
     .about-sidebar {
       display: flex;
@@ -394,7 +445,9 @@
     }
 
     /* ─── DOMAINS ──────────────────────────────────────────────────── */
-    #domains { background: var(--bg); }
+    #domains {
+      background: var(--bg);
+    }
 
     .domains-grid {
       display: grid;
@@ -411,8 +464,9 @@
       overflow: hidden;
       transition: box-shadow 0.2s, transform 0.2s;
     }
+
     .domain-card:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
       transform: translateY(-2px);
     }
 
@@ -441,10 +495,22 @@
       margin-bottom: 1.25rem;
       color: #fff;
     }
-    .domain-card:nth-child(1) .domain-icon { background: var(--tag-ai); }
-    .domain-card:nth-child(2) .domain-icon { background: var(--tag-sys); }
-    .domain-card:nth-child(3) .domain-icon { background: var(--tag-theory); }
-    .domain-card:nth-child(4) .domain-icon { background: var(--tag-hci); }
+
+    .domain-card:nth-child(1) .domain-icon {
+      background: var(--tag-ai);
+    }
+
+    .domain-card:nth-child(2) .domain-icon {
+      background: var(--tag-sys);
+    }
+
+    .domain-card:nth-child(3) .domain-icon {
+      background: var(--tag-theory);
+    }
+
+    .domain-card:nth-child(4) .domain-icon {
+      background: var(--tag-hci);
+    }
 
     .domain-title {
       font-family: var(--serif);
@@ -506,11 +572,23 @@
       transition: background 0.15s, color 0.15s;
       border-right: 1px solid var(--border);
     }
-    .schedule-tab:last-child { border-right: none; }
-    .schedule-tab.active { background: var(--navy); color: #fff; }
 
-    .schedule-day { display: none; }
-    .schedule-day.active { display: block; }
+    .schedule-tab:last-child {
+      border-right: none;
+    }
+
+    .schedule-tab.active {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .schedule-day {
+      display: none;
+    }
+
+    .schedule-day.active {
+      display: block;
+    }
 
     .schedule-date-banner {
       background: var(--bg);
@@ -564,13 +642,31 @@
       border-radius: 2px;
       flex-shrink: 0;
     }
-    .sched-legend-dot.ai::before { background: var(--tag-ai); }
-    .sched-legend-dot.sys::before { background: var(--tag-sys); }
-    .sched-legend-dot.theory::before { background: var(--tag-theory); }
-    .sched-legend-dot.hci::before { background: var(--tag-hci); }
-    .sched-legend-dot.general::before { background: var(--muted); }
 
-    .schedule-table { width: 100%; border-collapse: collapse; }
+    .sched-legend-dot.ai::before {
+      background: var(--tag-ai);
+    }
+
+    .sched-legend-dot.sys::before {
+      background: var(--tag-sys);
+    }
+
+    .sched-legend-dot.theory::before {
+      background: var(--tag-theory);
+    }
+
+    .sched-legend-dot.hci::before {
+      background: var(--tag-hci);
+    }
+
+    .sched-legend-dot.general::before {
+      background: var(--muted);
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
     .schedule-table thead th {
       font-size: 0.72rem;
@@ -587,7 +683,10 @@
       border-bottom: 1px solid var(--border-lt);
       transition: background 0.1s;
     }
-    .schedule-table tbody tr:hover { background: var(--bg); }
+
+    .schedule-table tbody tr:hover {
+      background: var(--bg);
+    }
 
     .schedule-table td {
       padding: 0.9rem 0.75rem;
@@ -631,12 +730,31 @@
       color: #fff;
       margin-top: 0.3rem;
     }
-    .sched-tag.ai { background: var(--tag-ai); }
-    .sched-tag.sys { background: var(--tag-sys); }
-    .sched-tag.theory { background: var(--tag-theory); }
-    .sched-tag.hci { background: var(--tag-hci); }
-    .sched-tag.general { background: var(--muted); }
-    .sched-tag.break { background: var(--border); color: var(--ink-2); }
+
+    .sched-tag.ai {
+      background: var(--tag-ai);
+    }
+
+    .sched-tag.sys {
+      background: var(--tag-sys);
+    }
+
+    .sched-tag.theory {
+      background: var(--tag-theory);
+    }
+
+    .sched-tag.hci {
+      background: var(--tag-hci);
+    }
+
+    .sched-tag.general {
+      background: var(--muted);
+    }
+
+    .sched-tag.break {
+      background: var(--border);
+      color: var(--ink-2);
+    }
 
     .sched-venue {
       font-size: 0.78rem;
@@ -662,7 +780,10 @@
       gap: 0.35rem;
       transition: background 0.15s, color 0.15s;
     }
-    .doc-toggle-btn:hover { background: var(--border-lt); }
+
+    .doc-toggle-btn:hover {
+      background: var(--border-lt);
+    }
 
     .docs-dropdown {
       margin-top: 0.5rem;
@@ -675,7 +796,10 @@
       flex-direction: column;
       gap: 0.5rem;
     }
-    .docs-dropdown.open { display: flex; }
+
+    .docs-dropdown.open {
+      display: flex;
+    }
 
     .doc-link {
       font-size: 0.82rem;
@@ -686,11 +810,20 @@
       text-decoration: none;
       transition: opacity 0.15s;
     }
-    .doc-link:hover { opacity: 0.7; }
-    .doc-link i { font-size: 0.9rem; color: var(--muted); }
+
+    .doc-link:hover {
+      opacity: 0.7;
+    }
+
+    .doc-link i {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
 
     /* ─── SPEAKERS ─────────────────────────────────────────────────── */
-    #speakers { background: var(--bg); }
+    #speakers {
+      background: var(--bg);
+    }
 
     .speakers-grid {
       display: grid;
@@ -709,8 +842,9 @@
       color: inherit;
       display: block;
     }
+
     .speaker-card:hover {
-      box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
       transform: translateY(-3px);
     }
 
@@ -741,12 +875,26 @@
       right: 0;
       height: 3px;
     }
-    .speaker-track-bar.ai { background: var(--tag-ai); }
-    .speaker-track-bar.sys { background: var(--tag-sys); }
-    .speaker-track-bar.theory { background: var(--tag-theory); }
-    .speaker-track-bar.hci { background: var(--tag-hci); }
 
-    .speaker-body { padding: 1.25rem; }
+    .speaker-track-bar.ai {
+      background: var(--tag-ai);
+    }
+
+    .speaker-track-bar.sys {
+      background: var(--tag-sys);
+    }
+
+    .speaker-track-bar.theory {
+      background: var(--tag-theory);
+    }
+
+    .speaker-track-bar.hci {
+      background: var(--tag-hci);
+    }
+
+    .speaker-body {
+      padding: 1.25rem;
+    }
 
     .speaker-name {
       font-family: var(--serif);
@@ -788,11 +936,26 @@
       border-radius: 3px;
       color: #fff;
     }
-    .speaker-domain.ai { background: var(--tag-ai); }
-    .speaker-domain.sys { background: var(--tag-sys); }
-    .speaker-domain.theory { background: var(--tag-theory); }
-    .speaker-domain.hci { background: var(--tag-hci); }
-    .speaker-domain.general { background: var(--muted); }
+
+    .speaker-domain.ai {
+      background: var(--tag-ai);
+    }
+
+    .speaker-domain.sys {
+      background: var(--tag-sys);
+    }
+
+    .speaker-domain.theory {
+      background: var(--tag-theory);
+    }
+
+    .speaker-domain.hci {
+      background: var(--tag-hci);
+    }
+
+    .speaker-domain.general {
+      background: var(--muted);
+    }
 
     .speaker-img-placeholder {
       width: 100%;
@@ -856,7 +1019,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 3rem 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
     /* ─── REGISTRATION ─────────────────────────────────────────────── */
@@ -917,7 +1080,7 @@
     /* ─── FOOTER ───────────────────────────────────────────────────── */
     #footer {
       background: var(--navy);
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.75);
       padding: 3.5rem 0 2rem;
     }
 
@@ -926,7 +1089,7 @@
       grid-template-columns: 1.5fr 1fr 1fr 1fr;
       gap: 3rem;
       padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .footer-brand-name {
@@ -939,7 +1102,7 @@
 
     .footer-brand-sub {
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       line-height: 1.6;
     }
 
@@ -948,11 +1111,13 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       margin-bottom: 1rem;
     }
 
-    .footer-links { list-style: none; }
+    .footer-links {
+      list-style: none;
+    }
 
     .footer-links li {
       margin-bottom: 0.5rem;
@@ -960,10 +1125,13 @@
 
     .footer-links a {
       font-size: 0.875rem;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       transition: color 0.15s;
     }
-    .footer-links a:hover { color: #fff; }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
 
     .footer-bottom {
       display: flex;
@@ -987,38 +1155,65 @@
     .footer-social {
       width: 34px;
       height: 34px;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       font-size: 0.85rem;
       transition: border-color 0.15s, color 0.15s;
     }
-    .footer-social:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
+
+    .footer-social:hover {
+      border-color: rgba(255, 255, 255, 0.7);
+      color: #fff;
+    }
 
     /* ─── RESPONSIVE ───────────────────────────────────────────────── */
     @media (max-width: 900px) {
+
       .hero-grid,
       .about-grid,
       .reg-grid,
-      .feedback-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .feedback-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
 
-      .hero-visual { display: none; }
-      .domains-grid { grid-template-columns: 1fr; }
-      .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-visual {
+        display: none;
+      }
+
+      .domains-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .speakers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       /* .gallery-grid { grid-template-columns: repeat(2, 1fr); } */
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
 
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
       .nav-links.mobile-open {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;
-        left: 0; right: 0;
+        left: 0;
+        right: 0;
         background: var(--bg);
         border-bottom: 1px solid var(--border);
         padding: 1rem;
@@ -1027,494 +1222,601 @@
     }
 
     @media (max-width: 600px) {
-      .speakers-grid { grid-template-columns: 1fr; }
+      .speakers-grid {
+        grid-template-columns: 1fr;
+      }
+
       /* .gallery-grid { grid-template-columns: 1fr; } */
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     /* ─── UTILITY ──────────────────────────────────────────────────── */
-    .text-center { text-align: center; }
-    .section-sub.center { margin-left: auto; margin-right: auto; }
-    .mt-1 { margin-top: 1rem; }
-    .mt-2 { margin-top: 2rem; }
-    .full-width-btn { width: 100%; justify-content: center; }
+    .text-center {
+      text-align: center;
+    }
+
+    .section-sub.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .mt-1 {
+      margin-top: 1rem;
+    }
+
+    .mt-2 {
+      margin-top: 2rem;
+    }
+
+    .full-width-btn {
+      width: 100%;
+      justify-content: center;
+    }
   </style>
 </head>
+
 <body>
 
-<nav id="navbar">
-  <div class="container">
-    <div class="nav-inner">
-      <div class="nav-logos">
-        <img src="cse-logo.jpg" alt="CSE IIT Delhi" class="nav-logo-img" />
-        <div class="nav-sep"></div>
-        <img src="aces.png" alt="ACES-ACM IIT Delhi" class="nav-logo-img" />
-        <div class="nav-sep" style="margin-left:0.5rem"></div>
-        <span class="nav-brand">Research Symposium '26</span>
-      </div>
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="nav-logos">
+          <img src="cse-logo.jpg" alt="CSE IIT Delhi" class="nav-logo-img" />
+          <div class="nav-sep"></div>
+          <img src="aces.png" alt="ACES-ACM IIT Delhi" class="nav-logo-img" />
+          <div class="nav-sep" style="margin-left:0.5rem"></div>
+          <span class="nav-brand">Research Symposium '26</span>
+        </div>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#domains">Tracks</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <!-- <li><a href="#gallery">Gallery</a></li> -->
-        <li><a href="#registration" class="nav-cta">Register</a></li>
-      </ul>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#domains">Tracks</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <!-- <li><a href="#gallery">Gallery</a></li> -->
+          <li><a href="#registration" class="nav-cta">Register</a></li>
+        </ul>
 
-      <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<section id="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-eyebrow">
-          <i class="fa-solid fa-circle-dot"></i> Second Edition · 2026
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <i class="fa-solid fa-circle-dot"></i> Second Edition · 2026
+          </div>
+          <h1 class="hero-title">CSE Research<br>Symposium</h1>
+          <p class="hero-org">Department of Computer Science & Engineering, IIT Delhi<br>in association with ACES-ACM
+            Student Chapter</p>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <i class="fa-regular fa-calendar"></i>
+              <span>April 4–5, 2026</span>
+            </div>
+            <div class="hero-meta-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>10:00 AM – 4:30 PM (IST), both days</span>
+            </div>
+            <div class="hero-meta-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>LH114, Lecture Hall Complex, IIT Delhi</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#registration" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Register Now</a>
+            <a href="#schedule" class="btn btn-outline"><i class="fa-regular fa-calendar-days"></i> View Schedule</a>
+          </div>
         </div>
-        <h1 class="hero-title">CSE Research<br>Symposium</h1>
-        <p class="hero-org">Department of Computer Science & Engineering, IIT Delhi<br>in association with ACES-ACM Student Chapter</p>
 
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <i class="fa-regular fa-calendar"></i>
-            <span>April 4–5, 2026</span>
-          </div>
-          <div class="hero-meta-item">
-            <i class="fa-regular fa-clock"></i>
-            <span>10:00 AM – 4:30 PM (IST), both days</span>
-          </div>
-          <div class="hero-meta-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>LH114, Lecture Hall Complex, IIT Delhi (Food: LH114 Foyer)</span>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#registration" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Register Now</a>
-          <a href="#schedule" class="btn btn-outline"><i class="fa-regular fa-calendar-days"></i> View Schedule</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-card-img">
-            <img src="poster.png" alt="Symposium" />
-          </div>
-          <div class="hero-card-body">
-            <div class="hero-stats">
-              <div class="hero-stat">
-                <div class="hero-stat-num">2</div>
-                <div class="hero-stat-label">Days</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-num">4</div>
-                <div class="hero-stat-label">Research Tracks</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-num">150+</div>
-                <div class="hero-stat-label">Attendees</div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-img">
+              <img src="poster.png" alt="Symposium" />
+            </div>
+            <div class="hero-card-body">
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <div class="hero-stat-num">2</div>
+                  <div class="hero-stat-label">Days</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">4</div>
+                  <div class="hero-stat-label">Research Tracks</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">150+</div>
+                  <div class="hero-stat-label">Attendees</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div>
-        <p class="section-label">About the Event</p>
-        <h2 class="section-title">A Platform for Research, Ideas & Collaboration</h2>
-        <div class="divider"></div>
-        <div class="about-body">
-          <p>The CSE Research Symposium is a flagship academic event organised by the Department of Computer Science & Engineering at IIT Delhi, in collaboration with the ACES-ACM Student Chapter. It brings together faculty, graduate researchers, undergraduate students, and industry practitioners under one roof to celebrate and advance cutting-edge computer science research.</p>
-          <p>Over two days, the symposium features keynote talks, faculty research presentations, graduate student talks, and poster sessions spanning four core research domains: Artificial Intelligence & Machine Learning, Systems & Security, Theory & Algorithms, and Human-Computer Interaction.</p>
-          <p>The event aims to bridge the gap between academic research and real-world application, providing a forum for cross-disciplinary dialogue, mentoring, and collaboration and inspiring the next generation of researchers at IIT Delhi.</p>
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p class="section-label">About the Event</p>
+          <h2 class="section-title">A Platform for Research, Ideas & Collaboration</h2>
+          <div class="divider"></div>
+          <div class="about-body">
+            <p>The CSE Research Symposium is a flagship academic event organised by the Department of Computer Science &
+              Engineering at IIT Delhi, in collaboration with the ACES-ACM Student Chapter. It brings together faculty,
+              graduate researchers, undergraduate students, and industry practitioners under one roof to celebrate and
+              advance cutting-edge computer science research.</p>
+            <p>Over two days, the symposium features keynote talks, faculty research presentations, graduate student
+              talks, and poster sessions spanning four core research domains: Artificial Intelligence & Machine
+              Learning, Systems & Security, Theory & Algorithms, and Human-Computer Interaction.</p>
+            <p>The event aims to bridge the gap between academic research and real-world application, providing a forum
+              for cross-disciplinary dialogue, mentoring, and collaboration and inspiring the next generation of
+              researchers at IIT Delhi.</p>
+          </div>
+        </div>
+
+        <div class="about-sidebar">
+          <div class="info-pill">
+            <div class="info-pill-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="info-pill-text">
+              <strong>Organised by</strong>
+              <span>Dept. of CSE, IIT Delhi &amp; ACES-ACM Student Chapter</span>
+            </div>
+          </div>
+          <div class="info-pill">
+            <div class="info-pill-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="info-pill-text">
+              <strong>Who it is for</strong>
+              <span>Open to CSE students only across all years and programmes</span>
+            </div>
+          </div>
+          <div class="info-pill">
+            <div class="info-pill-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="info-pill-text">
+              <strong>Format</strong>
+              <span>Talks · Poster Sessions · Panel Discussions · Networking</span>
+            </div>
+          </div>
+          <div class="info-pill">
+            <div class="info-pill-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="info-pill-text">
+              <strong>Awards &amp; Merch</strong>
+              <span>Exciting research awards and merchandise to grab</span>
+            </div>
+          </div>
+          <div class="info-pill">
+            <div class="info-pill-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <div class="info-pill-text">
+              <strong>Contact</strong>
+              <span>iitdelhiacesacm@gmail.com</span>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="about-sidebar">
-        <div class="info-pill">
-          <div class="info-pill-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <div class="info-pill-text">
-            <strong>Organised by</strong>
-            <span>Dept. of CSE, IIT Delhi &amp; ACES-ACM Student Chapter</span>
+  <section id="domains">
+    <div class="container">
+      <p class="section-label">Research Tracks</p>
+      <h2 class="section-title">Four Core Domains</h2>
+      <div class="divider"></div>
+      <p class="section-sub">The symposium is structured around four research tracks, split across two days each
+        covering a vibrant area of computer science.</p>
+
+      <div class="domains-grid">
+        <div class="domain-card">
+          <span class="domain-day-badge">Day 1 — April 4</span>
+          <div class="domain-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3 class="domain-title">Artificial Intelligence &amp; Machine Learning</h3>
+          <p class="domain-desc">Covering foundation models, deep learning, reinforcement learning, NLP, computer
+            vision, and the fundamental theory of learning algorithms. Research that shapes how machines perceive,
+            reason, and act.</p>
+          <div class="domain-topics">
+            <span class="topic-tag">Large Language Models</span>
+            <span class="topic-tag">Computer Vision</span>
+            <span class="topic-tag">Reinforcement Learning</span>
+            <span class="topic-tag">AI Safety</span>
+            <span class="topic-tag">NLP</span>
+            <span class="topic-tag">Graph ML</span>
           </div>
         </div>
-        <div class="info-pill">
-          <div class="info-pill-icon"><i class="fa-solid fa-users"></i></div>
-          <div class="info-pill-text">
-            <strong>Who it is for</strong>
-            <span>Open to CSE students only across all years and programmes</span>
+
+        <div class="domain-card">
+          <span class="domain-day-badge">Day 1 — April 4</span>
+          <div class="domain-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="domain-title">Systems &amp; Security</h3>
+          <p class="domain-desc">From operating systems and distributed computing to cryptography and network security.
+            Research that builds the reliable, efficient, and secure foundations on which software and the internet run.
+          </p>
+          <div class="domain-topics">
+            <span class="topic-tag">Operating Systems</span>
+            <span class="topic-tag">Distributed Systems</span>
+            <span class="topic-tag">Cryptography</span>
+            <span class="topic-tag">Network Security</span>
+            <span class="topic-tag">Compilers</span>
+            <span class="topic-tag">Cloud Computing</span>
           </div>
         </div>
-        <div class="info-pill">
-          <div class="info-pill-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <div class="info-pill-text">
-            <strong>Format</strong>
-            <span>Talks · Poster Sessions · Panel Discussions · Networking</span>
+
+        <div class="domain-card">
+          <span class="domain-day-badge">Day 2 — April 5</span>
+          <div class="domain-icon"><i class="fa-solid fa-infinity"></i></div>
+          <h3 class="domain-title">Theory &amp; Algorithms</h3>
+          <p class="domain-desc">The mathematical heart of computer science — complexity theory, algorithm design,
+            computational geometry, combinatorics, and formal methods that underpin all of computing.</p>
+          <div class="domain-topics">
+            <span class="topic-tag">Complexity Theory</span>
+            <span class="topic-tag">Approximation Algorithms</span>
+            <span class="topic-tag">Graph Algorithms</span>
+            <span class="topic-tag">Formal Verification</span>
+            <span class="topic-tag">Quantum Computing</span>
+            <span class="topic-tag">Online Algorithms</span>
           </div>
         </div>
-        <div class="info-pill">
-          <div class="info-pill-icon"><i class="fa-solid fa-award"></i></div>
-          <div class="info-pill-text">
-            <strong>Awards &amp; Merch</strong>
-            <span>Exciting research awards and merchandise to grab</span>
-          </div>
-        </div>
-        <div class="info-pill">
-          <div class="info-pill-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-          <div class="info-pill-text">
-            <strong>Contact</strong>
-            <span>iitdelhiacesacm@gmail.com</span>
+
+        <div class="domain-card">
+          <span class="domain-day-badge">Day 2 — April 5</span>
+          <div class="domain-icon"><i class="fa-solid fa-display"></i></div>
+          <h3 class="domain-title">Human-Computer Interaction</h3>
+          <p class="domain-desc">Bridging the gap between people and computing systems — UI/UX research, accessibility,
+            augmented reality, affective computing, and the social dimensions of technology design.</p>
+          <div class="domain-topics">
+            <span class="topic-tag">UI/UX Research</span>
+            <span class="topic-tag">Accessibility</span>
+            <span class="topic-tag">Augmented Reality</span>
+            <span class="topic-tag">Affective Computing</span>
+            <span class="topic-tag">CSCW</span>
+            <span class="topic-tag">Visualization</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="domains">
-  <div class="container">
-    <p class="section-label">Research Tracks</p>
-    <h2 class="section-title">Four Core Domains</h2>
-    <div class="divider"></div>
-    <p class="section-sub">The symposium is structured around four research tracks, split across two days each covering a vibrant area of computer science.</p>
+  <section id="schedule">
+    <div class="container">
+      <p class="section-label">Programme</p>
+      <h2 class="section-title">Schedule at a Glance</h2>
+      <div class="divider"></div>
 
-    <div class="domains-grid">
-      <div class="domain-card">
-        <span class="domain-day-badge">Day 1 — April 4</span>
-        <div class="domain-icon"><i class="fa-solid fa-brain"></i></div>
-        <h3 class="domain-title">Artificial Intelligence &amp; Machine Learning</h3>
-        <p class="domain-desc">Covering foundation models, deep learning, reinforcement learning, NLP, computer vision, and the fundamental theory of learning algorithms. Research that shapes how machines perceive, reason, and act.</p>
-        <div class="domain-topics">
-          <span class="topic-tag">Large Language Models</span>
-          <span class="topic-tag">Computer Vision</span>
-          <span class="topic-tag">Reinforcement Learning</span>
-          <span class="topic-tag">AI Safety</span>
-          <span class="topic-tag">NLP</span>
-          <span class="topic-tag">Graph ML</span>
-        </div>
+      <div class="schedule-tabs">
+        <button class="schedule-tab active" onclick="switchDay(0, this)">Day 1 — April 4</button>
+        <button class="schedule-tab" onclick="switchDay(1, this)">Day 2 — April 5</button>
       </div>
 
-      <div class="domain-card">
-        <span class="domain-day-badge">Day 1 — April 4</span>
-        <div class="domain-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <h3 class="domain-title">Systems &amp; Security</h3>
-        <p class="domain-desc">From operating systems and distributed computing to cryptography and network security. Research that builds the reliable, efficient, and secure foundations on which software and the internet run.</p>
-        <div class="domain-topics">
-          <span class="topic-tag">Operating Systems</span>
-          <span class="topic-tag">Distributed Systems</span>
-          <span class="topic-tag">Cryptography</span>
-          <span class="topic-tag">Network Security</span>
-          <span class="topic-tag">Compilers</span>
-          <span class="topic-tag">Cloud Computing</span>
+      <div class="schedule-day active">
+        <div class="schedule-date-banner">
+          <div class="sched-date-num">04</div>
+          <div class="sched-date-info">
+            <strong>Saturday · April 4, 2026</strong>
+            <span>Venue: LH114, Lecture Hall Complex</span>
+          </div>
         </div>
+
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Session</th>
+              <th style="text-align:right">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sched-time">9:30 AM - 9:40 AM</td>
+              <td>
+                <div class="sched-event-name">Settling-in and Opening Remarks</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">9:40 AM - 11:00 AM</td>
+              <td>
+                <div class="sched-event-name">Dr. Jyothi Krishnan</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">11:00 AM - 11:30 AM</td>
+              <td>
+                <div class="sched-event-name">Coffee Break</div>
+              </td>
+              <td class="sched-venue">LH114 Foyer</td>
+            </tr>
+            <tr>
+              <td class="sched-time">11:30 AM - 12:00 PM</td>
+              <td>
+                <div class="sched-event-name">Dr. Chetan Arora</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">12:00 PM - 1:00 PM</td>
+              <td>
+                <div class="sched-event-name">Dr. Kolin Paul</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">1:00 PM - 2:00 PM</td>
+              <td>
+                <div class="sched-event-name">Lunch</div>
+              </td>
+              <td class="sched-venue">LH114 Foyer</td>
+            </tr>
+            <tr>
+              <td class="sched-time">2:00 PM - 3:00 PM</td>
+              <td>
+                <div class="sched-event-name">Dr. Vaishnavi Sundararajan</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">3:00 PM - 4:30 PM</td>
+              <td>
+                <div class="sched-event-name">Student Presentations</div>
+                <div class="sched-event-sub">6 talks · 15 mins each</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">4:30 PM - 5:30 PM</td>
+              <td>
+                <div class="sched-event-name">Coffee Break + Posters</div>
+              </td>
+              <td class="sched-venue">LH114 Foyer</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <div class="domain-card">
-        <span class="domain-day-badge">Day 2 — April 5</span>
-        <div class="domain-icon"><i class="fa-solid fa-infinity"></i></div>
-        <h3 class="domain-title">Theory &amp; Algorithms</h3>
-        <p class="domain-desc">The mathematical heart of computer science — complexity theory, algorithm design, computational geometry, combinatorics, and formal methods that underpin all of computing.</p>
-        <div class="domain-topics">
-          <span class="topic-tag">Complexity Theory</span>
-          <span class="topic-tag">Approximation Algorithms</span>
-          <span class="topic-tag">Graph Algorithms</span>
-          <span class="topic-tag">Formal Verification</span>
-          <span class="topic-tag">Quantum Computing</span>
-          <span class="topic-tag">Online Algorithms</span>
+      <div class="schedule-day">
+        <div class="schedule-date-banner">
+          <div class="sched-date-num">05</div>
+          <div class="sched-date-info">
+            <strong>Sunday · April 5, 2026</strong>
+            <span>Venue: LH114, Lecture Hall Complex</span>
+          </div>
         </div>
-      </div>
 
-      <div class="domain-card">
-        <span class="domain-day-badge">Day 2 — April 5</span>
-        <div class="domain-icon"><i class="fa-solid fa-display"></i></div>
-        <h3 class="domain-title">Human-Computer Interaction</h3>
-        <p class="domain-desc">Bridging the gap between people and computing systems — UI/UX research, accessibility, augmented reality, affective computing, and the social dimensions of technology design.</p>
-        <div class="domain-topics">
-          <span class="topic-tag">UI/UX Research</span>
-          <span class="topic-tag">Accessibility</span>
-          <span class="topic-tag">Augmented Reality</span>
-          <span class="topic-tag">Affective Computing</span>
-          <span class="topic-tag">CSCW</span>
-          <span class="topic-tag">Visualization</span>
-        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Session</th>
+              <th style="text-align:right">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sched-time">10:00 AM - 11:00 AM</td>
+              <td>
+                <div class="sched-event-name">Dr. Arkaprava Basu</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">11:00 AM - 11:30 AM</td>
+              <td>
+                <div class="sched-event-name">Coffee Break</div>
+              </td>
+              <td class="sched-venue">LH114 Foyer</td>
+            </tr>
+            <tr>
+              <td class="sched-time">11:30 AM - 12:00 PM</td>
+              <td>
+                <div class="sched-event-name">Dr. Abhilash Jindal</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">12:00 PM - 1:00 PM</td>
+              <td>
+                <div class="sched-event-name">Dr. Sorav Bansal</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">1:00 PM - 2:00 PM</td>
+              <td>
+                <div class="sched-event-name">Lunch</div>
+              </td>
+              <td class="sched-venue">LH114 Foyer</td>
+            </tr>
+            <tr>
+              <td class="sched-time">2:00 PM - 3:00 PM</td>
+              <td>
+                <div class="sched-event-name">Dr. Venkata Koppula</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">3:00 PM - 4:00 PM</td>
+              <td>
+                <div class="sched-event-name">Student Presentations</div>
+                <div class="sched-event-sub">4 talks · 15 mins each</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+            <tr>
+              <td class="sched-time">4:00 PM - 4:30 PM</td>
+              <td>
+                <div class="sched-event-name">Coffee Break + Posters</div>
+              </td>
+              <td class="sched-venue">LH114 Foyer</td>
+            </tr>
+            <tr>
+              <td class="sched-time">4:30 PM - 6:00 PM</td>
+              <td>
+                <div class="sched-event-name">Quiz + Closing</div>
+              </td>
+              <td class="sched-venue">LH114</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="schedule">
-  <div class="container">
-    <p class="section-label">Programme</p>
-    <h2 class="section-title">Schedule at a Glance</h2>
-    <div class="divider"></div>
+  <section id="speakers">
+    <div class="container">
+      <p class="section-label">Featured Speakers</p>
+      <h2 class="section-title">Who's Speaking</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Bringing together leading minds from across the country and our own research community.</p>
 
-    <div class="schedule-tabs">
-      <button class="schedule-tab active" onclick="switchDay(0, this)">Day 1 — April 4</button>
-      <button class="schedule-tab" onclick="switchDay(1, this)">Day 2 — April 5</button>
-    </div>
+      <div class="speakers-grid">
 
-    <div class="schedule-day active">
-      <div class="schedule-date-banner">
-        <div class="sched-date-num">04</div>
-        <div class="sched-date-info">
-          <strong>Saturday · April 4, 2026</strong>
-          <span>Venue: LH114, Lecture Hall Complex</span>
-        </div>
+        <a href="https://www.csa.iisc.ac.in/~arkapravab/" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="Arka.jpg" alt="Arkaprava Basu" class="no-crop" />
+            <div class="speaker-track-bar sys"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Arkaprava Basu</div>
+            <div class="speaker-title">Associate Professor, IISc Bengaluru</div>
+            <div class="speaker-bio">Leads the Computer Systems Lab at IISc; works on memory management across OS and
+              architecture boundaries (GPU/CPU), software reliability, and security.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain sys">Systems &amp; Security</span>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.cse.iitd.ac.in/~chetan/" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="chetan.jpg" alt="Chetan Arora" class="no-crop" />
+            <div class="speaker-track-bar ai"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Chetan Arora</div>
+            <div class="speaker-title">Professor, CSE, IIT Delhi</div>
+            <div class="speaker-bio">Professor at CSE, IIT Delhi, and joint faculty at Yardi School of AI and ANSK School of
+              IT. Research focus includes Trustworthy AI, Indian population-specific Cancer Detection, mobility systems,
+              and egocentric vision.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain ai">Artificial Intelligence &amp; Machine Learning</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.cse.iitd.ac.in/~venkata/" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="kvenkata.jpg" alt="Venkata Koppula" class="no-crop" />
+            <div class="speaker-track-bar theory"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Venkata Koppula</div>
+            <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
+            <div class="speaker-bio">Assistant Professor at CSE, IIT Delhi. Previously a postdoc at the Weizmann
+              Institute of Science and obtained his Ph.D. from UT Austin. His research interests lie in the area of
+              theoretical cryptography.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain theory">Theory &amp; Algorithms</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://iitgn.ac.in/faculty/cse/fac-jyothi" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="jyothi.jpg" alt="Jyothi Krishnan" />
+            <div class="speaker-track-bar hci"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Jyothi Krishnan</div>
+            <div class="speaker-title">Assistant Teaching Professor, CSE, IIT Gandhinagar</div>
+            <div class="speaker-bio">Works at the intersection of mathematics education and game design, with interests
+              in mathematical games, board games, and school mathematics through games.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain hci">Human-Computer Interaction</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://abhilash-jindal.com/" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="abhilash.png" alt="Abhilash Jindal" class="no-crop" />
+            <div class="speaker-track-bar sys"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Abhilash Jindal</div>
+            <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
+            <div class="speaker-bio">Broadly interested in systems, with research spanning system design, performance,
+              and energy-aware computing.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain sys">Systems &amp; Security</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://vaishs.github.io/" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="vaishnavi.jpg" alt="Vaishnavi Sundararajan" class="no-crop" />
+            <div class="speaker-track-bar theory"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Vaishnavi Sundararajan</div>
+            <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
+            <div class="speaker-bio">Works on applying formal methods and logic to security, including formal modeling
+              and verification of security protocols.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain theory">Theory &amp; Algorithms</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.cse.iitd.ac.in/~kolin/" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="kolin.jpg" alt="Kolin Paul" class="no-crop" />
+            <div class="speaker-track-bar sys"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Kolin Paul</div>
+            <div class="speaker-title">Professor, Computer Science and Engineering, IIT Delhi</div>
+            <div class="speaker-bio">Research focuses on embedded heterogeneous systems (GPU/CPU/FPGA), high-performance
+              accelerators for HPC, cyber-physical systems security, and quantum computing.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain sys">Systems &amp; Security</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.cse.iitd.ac.in/~sbansal/" target="_blank" class="speaker-card">
+          <div class="speaker-img-wrap">
+            <img src="sorav.jpg" alt="Sorav Bansal" class="no-crop" />
+            <div class="speaker-track-bar sys"></div>
+          </div>
+          <div class="speaker-body">
+            <div class="speaker-name">Dr. Sorav Bansal</div>
+            <div class="speaker-title">Professor, Department of Computer Science, IIT Delhi</div>
+            <div class="speaker-bio">Works on program superoptimization and AI-based compiler optimization; currently on
+              long leave from IIT Delhi working on compiler optimization at Graviton Research Capital.</div>
+            <div class="speaker-footer">
+              <span class="speaker-domain sys">Systems &amp; Security</span>
+            </div>
+          </div>
+        </a>
+
       </div>
-
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Session</th>
-            <th style="text-align:right">Location</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="sched-time">10:00 AM - 10:10 AM</td>
-            <td><div class="sched-event-name">Opening Remarks</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">10:10 AM - 11:15 AM</td>
-            <td><div class="sched-event-name">Dr. Jyothi Krishnan</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">11:15 AM - 11:45 AM</td>
-            <td><div class="sched-event-name">Coffee Break</div></td>
-            <td class="sched-venue">LH114 Foyer</td>
-          </tr>
-          <tr>
-            <td class="sched-time">11:45 AM - 12:30 PM</td>
-            <td><div class="sched-event-name">Dr. Abhilash Jindal</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">12:30 PM - 2:00 PM</td>
-            <td><div class="sched-event-name">Lunch</div></td>
-            <td class="sched-venue">LH114 Foyer</td>
-          </tr>
-          <tr>
-            <td class="sched-time">2:00 PM - 3:00 PM</td>
-            <td><div class="sched-event-name">Dr. Vaishnavi Sundararajan</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">3:00 PM - 3:30 PM</td>
-            <td><div class="sched-event-name">Student Presentation</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">3:30 PM - 4:00 PM</td>
-            <td><div class="sched-event-name">Coffee</div></td>
-            <td class="sched-venue">LH114 Foyer</td>
-          </tr>
-          <tr>
-            <td class="sched-time">4:00 PM - 5:00 PM</td>
-            <td><div class="sched-event-name">Student Presentation</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">5:00 PM onwards</td>
-            <td><div class="sched-event-name">Posters</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
+  </section>
 
-    <div class="schedule-day">
-      <div class="schedule-date-banner">
-        <div class="sched-date-num">05</div>
-        <div class="sched-date-info">
-          <strong>Sunday · April 5, 2026</strong>
-          <span>Venue: LH114, Lecture Hall Complex</span>
-        </div>
-      </div>
-
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Session</th>
-            <th style="text-align:right">Location</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="sched-time">10:00 AM - 11:00 AM</td>
-            <td><div class="sched-event-name">Dr. Arkaprava Basu</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">11:00 AM - 11:30 AM</td>
-            <td><div class="sched-event-name">Coffee</div></td>
-            <td class="sched-venue">LH114 Foyer</td>
-          </tr>
-          <tr>
-            <td class="sched-time">11:30 AM - 12:15 PM</td>
-            <td><div class="sched-event-name">Dr. Kolin Paul</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">12:15 PM - 1:00 PM</td>
-            <td><div class="sched-event-name">Dr. Sorav Bansal</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">1:00 PM - 2:30 PM</td>
-            <td><div class="sched-event-name">Lunch</div></td>
-            <td class="sched-venue">LH114 Foyer</td>
-          </tr>
-          <tr>
-            <td class="sched-time">2:30 PM - 4:00 PM</td>
-            <td><div class="sched-event-name">Quiz</div></td>
-            <td class="sched-venue">LH114</td>
-          </tr>
-          <tr>
-            <td class="sched-time">4:00 PM - 4:30 PM</td>
-            <td><div class="sched-event-name">Closing + Awards, Coffee</div></td>
-            <td class="sched-venue">LH114 Foyer</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section id="speakers">
-  <div class="container">
-    <p class="section-label">Featured Speakers</p>
-    <h2 class="section-title">Who's Speaking</h2>
-    <div class="divider"></div>
-    <p class="section-sub">Bringing together leading minds from across the country and our own research community.</p>
-
-    <div class="speakers-grid">
-
-      <a href="https://www.csa.iisc.ac.in/~arkapravab/" target="_blank" class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="Arka.jpg" alt="Arkaprava Basu" class="no-crop" />
-          <div class="speaker-track-bar sys"></div>
-        </div>
-        <div class="speaker-body">
-          <div class="speaker-name">Dr. Arkaprava Basu</div>
-          <div class="speaker-title">Associate Professor, IISc Bengaluru</div>
-          <div class="speaker-bio">Leads the Computer Systems Lab at IISc; works on memory management across OS and architecture boundaries (GPU/CPU), software reliability, and security.</div>
-          <div class="speaker-footer">
-            <span class="speaker-domain sys">Systems &amp; Security</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.cse.iitd.ac.in/~srikanta/" target="_blank" class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="srikanta.png" alt="Srikanta Bedathur" class="no-crop" />
-          <div class="speaker-track-bar ai"></div>
-        </div>
-        <div class="speaker-body">
-          <div class="speaker-name">Dr. Srikanta Bedathur</div>
-          <div class="speaker-title">Professor and DS Chair of AI, CSE, IIT Delhi</div>
-          <div class="speaker-bio">Research interests include temporal information modeling, graph data mining and management, information retrieval, and knowledge-base infrastructure.</div>
-          <div class="speaker-footer">
-            <span class="speaker-domain ai">Artificial Intelligence &amp; Machine Learning</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://iitgn.ac.in/faculty/cse/fac-jyothi" target="_blank" class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="jyothi.jpg" alt="Jyothi Krishnan" />
-          <div class="speaker-track-bar hci"></div>
-        </div>
-        <div class="speaker-body">
-          <div class="speaker-name">Dr. Jyothi Krishnan</div>
-          <div class="speaker-title">Assistant Teaching Professor, CSE, IIT Gandhinagar</div>
-          <div class="speaker-bio">Works at the intersection of mathematics education and game design, with interests in mathematical games, board games, and school mathematics through games.</div>
-          <div class="speaker-footer">
-            <span class="speaker-domain hci">Human-Computer Interaction</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://abhilash-jindal.com/" target="_blank" class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="abhilash.png" alt="Abhilash Jindal" class="no-crop" />
-          <div class="speaker-track-bar sys"></div>
-        </div>
-        <div class="speaker-body">
-          <div class="speaker-name">Dr. Abhilash Jindal</div>
-          <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
-          <div class="speaker-bio">Broadly interested in systems, with research spanning system design, performance, and energy-aware computing.</div>
-          <div class="speaker-footer">
-            <span class="speaker-domain sys">Systems &amp; Security</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://vaishs.github.io/" target="_blank" class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="vaishnavi.jpg" alt="Vaishnavi Sundararajan" class="no-crop" />
-          <div class="speaker-track-bar theory"></div>
-        </div>
-        <div class="speaker-body">
-          <div class="speaker-name">Dr. Vaishnavi Sundararajan</div>
-          <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
-          <div class="speaker-bio">Works on applying formal methods and logic to security, including formal modeling and verification of security protocols.</div>
-          <div class="speaker-footer">
-            <span class="speaker-domain theory">Theory &amp; Algorithms</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.cse.iitd.ac.in/~kolin/" target="_blank" class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="kolin.jpg" alt="Kolin Paul" class="no-crop" />
-          <div class="speaker-track-bar sys"></div>
-        </div>
-        <div class="speaker-body">
-          <div class="speaker-name">Dr. Kolin Paul</div>
-          <div class="speaker-title">Professor, Computer Science and Engineering, IIT Delhi</div>
-          <div class="speaker-bio">Research focuses on embedded heterogeneous systems (GPU/CPU/FPGA), high-performance accelerators for HPC, cyber-physical systems security, and quantum computing.</div>
-          <div class="speaker-footer">
-            <span class="speaker-domain sys">Systems &amp; Security</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.cse.iitd.ac.in/~sbansal/" target="_blank" class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="sorav.jpg" alt="Sorav Bansal" class="no-crop" />
-          <div class="speaker-track-bar sys"></div>
-        </div>
-        <div class="speaker-body">
-          <div class="speaker-name">Dr. Sorav Bansal</div>
-          <div class="speaker-title">Professor, Department of Computer Science, IIT Delhi</div>
-          <div class="speaker-bio">Works on program superoptimization and AI-based compiler optimization; currently on long leave from IIT Delhi working on compiler optimization at Graviton Research Capital.</div>
-          <div class="speaker-footer">
-            <span class="speaker-domain sys">Systems &amp; Security</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- <section id="gallery"> -->
+  <!-- <section id="gallery"> -->
   <!-- <div class="container">
     <p class="section-label">Past Edition</p>
     <h2 class="section-title">A Look Back — Symposium 2025</h2>
@@ -1535,169 +1837,194 @@
   </div>
 </section> -->
 
-<section id="registration">
-  <div class="container">
-    <p class="section-label" style="text-align:center">Join Us</p>
-    <h2 class="section-title" style="text-align:center">Register for the Symposium</h2>
-    <div class="divider" style="margin:1rem auto 1rem"></div>
-    <p class="section-sub center" style="text-align:center;margin:0 auto 2.5rem">Open to CSE students only. Registration is free and covers both days including all sessions, lunch, coffee, and the poster exhibition.</p>
+  <section id="registration">
+    <div class="container">
+      <p class="section-label" style="text-align:center">Join Us</p>
+      <h2 class="section-title" style="text-align:center">Register for the Symposium</h2>
+      <div class="divider" style="margin:1rem auto 1rem"></div>
+      <p class="section-sub center" style="text-align:center;margin:0 auto 2.5rem">Open to CSE students only.
+        Registration is free and covers both days including all sessions, lunch, coffee, and the poster exhibition.</p>
 
-    <div class="reg-grid">
-      <div class="reg-info">
-        <h3>Why Register?</h3>
-        <p>Registration gives you access to the full two-day schedule, meals, and exclusive symposium merchandise. It helps us accurately plan the logistics for a great experience.</p>
-        
-        <h3>Important Note</h3>
-        <p>You must use your official IIT Delhi email address to access the form and register.</p>
-      </div>
-      
-      <div class="form-card text-center" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-        <i class="fa-solid fa-up-right-from-square" style="font-size:2.5rem;color:var(--navy);margin-bottom:1.5rem;"></i>
-        <h3 style="font-family:var(--serif);font-size:1.25rem;color:var(--navy);margin-bottom:0.5rem;">Registration Form</h3>
-        <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;">Click below to fill out your details and secure your spot.</p>
-        <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=S1xNYsVFIkGM0ETw-E6UXZS-tOYoxx5KtcIrhzRyNzVUN1NMQ0hMMEM4WjJJWEZKNTJaTTBUQ0RFWC4u" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">
-          Proceed to Form <i class="fa-solid fa-arrow-right" style="margin-left:0.5rem;font-size:0.8rem;"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="reg-grid">
+        <div class="reg-info">
+          <h3>Why Register?</h3>
+          <p>Registration gives you access to the full two-day schedule, meals, and exclusive symposium merchandise. It
+            helps us accurately plan the logistics for a great experience.</p>
 
-<section id="feedback">
-  <div class="container">
-    <p class="section-label">Suggestions &amp; Feedback</p>
-    <h2 class="section-title">Help Us Shape the Event</h2>
-    <div class="divider"></div>
-
-    <div class="feedback-grid">
-      <div class="feedback-left">
-        <h3>Your input matters</h3>
-        <p>Whether it's a speaker you'd love to see, a topic you want covered, or any thoughts about the event format — we're listening. This is your symposium.</p>
-        <br />
-        <h3>Questions?</h3>
-        <p>If you have any specific inquiries regarding the event, schedule, or presentation formats, feel free to use the feedback form to drop us a note.</p>
-      </div>
-
-      <div class="form-card text-center" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-        <i class="fa-regular fa-comment-dots" style="font-size:2.5rem;color:var(--navy);margin-bottom:1.5rem;"></i>
-        <h3 style="font-family:var(--serif);font-size:1.25rem;color:var(--navy);margin-bottom:0.5rem;">Feedback Form</h3>
-        <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;">Share your suggestions, questions, and feedback through this</p>
-        <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=S1xNYsVFIkGM0ETw-E6UXZS-tOYoxx5KtcIrhzRyNzVUNTVKRDhYWDkzVDNQREhaWVQ1U1dKRjY3SS4u" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;">
-          Proceed to Form <i class="fa-solid fa-arrow-right" style="margin-left:0.5rem;font-size:0.8rem;"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand-name">CSE Research Symposium '26</div>
-        <div class="footer-brand-sub">
-          Organised by the Department of Computer Science &amp; Engineering, IIT Delhi in association with the ACES-ACM Student Chapter.<br /><br />
-          Venue: LH114, Lecture Hall Complex, IIT Delhi, Hauz Khas, New Delhi - 110016.<br />
-          Food and coffee service: LH114 Foyer.
+          <h3>Important Note</h3>
+          <p>You must use your official IIT Delhi email address to access the form and register.</p>
         </div>
-        <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.6rem">
-          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Goodies</span>
-          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Meals &amp; Tea</span>
-          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Networking</span>
-          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Research Ideas</span>
-          <span style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Faculty Access</span>
+
+        <div class="form-card text-center"
+          style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-up-right-from-square"
+            style="font-size:2.5rem;color:var(--navy);margin-bottom:1.5rem;"></i>
+          <h3 style="font-family:var(--serif);font-size:1.25rem;color:var(--navy);margin-bottom:0.5rem;">Registration
+            Form</h3>
+          <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;">Click below to fill out your details and
+            secure your spot.</p>
+          <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=S1xNYsVFIkGM0ETw-E6UXZS-tOYoxx5KtcIrhzRyNzVUN1NMQ0hMMEM4WjJJWEZKNTJaTTBUQ0RFWC4u"
+            target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Proceed to Form <i class="fa-solid fa-arrow-right" style="margin-left:0.5rem;font-size:0.8rem;"></i>
+          </a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="footer-col">
-        <h4>Quicklinks</h4>
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#domains">Research Tracks</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <!-- <li><a href="#gallery">Gallery</a></li> -->
-        </ul>
-      </div>
+  <section id="feedback">
+    <div class="container">
+      <p class="section-label">Suggestions &amp; Feedback</p>
+      <h2 class="section-title">Help Us Shape the Event</h2>
+      <div class="divider"></div>
 
-      <div class="footer-col">
-        <h4>Participate</h4>
-        <ul class="footer-links">
-          <li><a href="#registration">Register</a></li>
-          <li><a href="#feedback">Feedback</a></li>
-        </ul>
-      </div>
+      <div class="feedback-grid">
+        <div class="feedback-left">
+          <h3>Your input matters</h3>
+          <p>Whether it's a speaker you'd love to see, a topic you want covered, or any thoughts about the event format
+            — we're listening. This is your symposium.</p>
+          <br />
+          <h3>Questions?</h3>
+          <p>If you have any specific inquiries regarding the event, schedule, or presentation formats, feel free to use
+            the feedback form to drop us a note.</p>
+        </div>
 
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul class="footer-links">
-          <li><a href="mailto:iitdelhiacesacm@gmail.com">iitdelhiacesacm@gmail.com</a></li>
-          <li><a href="https://www.cse.iitd.ac.in" target="_blank">cse.iitd.ac.in</a></li>
-        </ul>
-        <br />
-        <h4>ACES-ACM</h4>
-        <ul class="footer-links">
-          <li><a href="https://www.instagram.com/acesacm.iitdelhi/">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/aces-acm-iit-delhi/posts/?feedView=all">LinkedIn</a></li>
-        </ul>
+        <div class="form-card text-center"
+          style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fa-regular fa-comment-dots" style="font-size:2.5rem;color:var(--navy);margin-bottom:1.5rem;"></i>
+          <h3 style="font-family:var(--serif);font-size:1.25rem;color:var(--navy);margin-bottom:0.5rem;">Feedback Form
+          </h3>
+          <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;">Share your suggestions, questions, and
+            feedback through this</p>
+          <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=S1xNYsVFIkGM0ETw-E6UXZS-tOYoxx5KtcIrhzRyNzVUNTVKRDhYWDkzVDNQREhaWVQ1U1dKRjY3SS4u"
+            target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;">
+            Proceed to Form <i class="fa-solid fa-arrow-right" style="margin-left:0.5rem;font-size:0.8rem;"></i>
+          </a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <span>&copy; 2026 Dept. of CSE, IIT Delhi &amp; ACES-ACM. All rights reserved.</span>
-      <div class="footer-socials">
-        <a href="https://www.instagram.com/acesacm.iitdelhi/" class="footer-social"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/aces-acm-iit-delhi/posts/?feedView=all" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:iitdelhiacesacm@gmail.com" class="footer-social"><i class="fa fa-envelope"></i></a>
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">CSE Research Symposium '26</div>
+          <div class="footer-brand-sub">
+            Organised by the Department of Computer Science &amp; Engineering, IIT Delhi in association with the
+            ACES-ACM Student Chapter.<br /><br />
+            Venue: LH114, Lecture Hall Complex, IIT Delhi, Hauz Khas, New Delhi - 110016.<br />
+            Food and coffee service: LH114 Foyer.
+          </div>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.6rem">
+            <span
+              style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Goodies</span>
+            <span
+              style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Meals
+              &amp; Tea</span>
+            <span
+              style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Networking</span>
+            <span
+              style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Research
+              Ideas</span>
+            <span
+              style="font-size:0.78rem;padding:0.3rem 0.7rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:4px;color:rgba(255,255,255,0.8)">Faculty
+              Access</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quicklinks</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#domains">Research Tracks</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <!-- <li><a href="#gallery">Gallery</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Participate</h4>
+          <ul class="footer-links">
+            <li><a href="#registration">Register</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:iitdelhiacesacm@gmail.com">iitdelhiacesacm@gmail.com</a></li>
+            <li><a href="https://www.cse.iitd.ac.in" target="_blank">cse.iitd.ac.in</a></li>
+          </ul>
+          <br />
+          <h4>ACES-ACM</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/acesacm.iitdelhi/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/aces-acm-iit-delhi/posts/?feedView=all">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dept. of CSE, IIT Delhi &amp; ACES-ACM. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/acesacm.iitdelhi/" class="footer-social"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/aces-acm-iit-delhi/posts/?feedView=all" class="footer-social"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:iitdelhiacesacm@gmail.com" class="footer-social"><i class="fa fa-envelope"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  // Docs Dropdown Toggle
-  function toggleDocs(btn) {
-    const dropdown = btn.nextElementSibling;
-    dropdown.classList.toggle('open');
-    if(dropdown.classList.contains('open')) {
-      btn.innerHTML = '<i class="fa-solid fa-folder-minus"></i> Hide Documents';
-    } else {
-      btn.innerHTML = '<i class="fa-solid fa-folder-open"></i> Documents';
+  <script>
+    // Docs Dropdown Toggle
+    function toggleDocs(btn) {
+      const dropdown = btn.nextElementSibling;
+      dropdown.classList.toggle('open');
+      if (dropdown.classList.contains('open')) {
+        btn.innerHTML = '<i class="fa-solid fa-folder-minus"></i> Hide Documents';
+      } else {
+        btn.innerHTML = '<i class="fa-solid fa-folder-open"></i> Documents';
+      }
     }
-  }
 
-  // Navbar scroll shadow
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
-  });
+    // Navbar scroll shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
 
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('mobile-open');
-  }
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('mobile-open');
+    }
 
-  // Schedule day tabs
-  function switchDay(index, btn) {
-    document.querySelectorAll('.schedule-day').forEach((d, i) => {
-      d.classList.toggle('active', i === index);
-    });
-    document.querySelectorAll('.schedule-tab').forEach((t, i) => {
-      t.classList.toggle('active', i === index);
-    });
-  }
+    // Schedule day tabs
+    function switchDay(index, btn) {
+      document.querySelectorAll('.schedule-day').forEach((d, i) => {
+        d.classList.toggle('active', i === index);
+      });
+      document.querySelectorAll('.schedule-tab').forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+    }
 
-  // Active nav link on scroll
-  const sections = document.querySelectorAll('section[id], footer[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--navy)' : '';
+      });
     });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--navy)' : '';
-    });
-  });
-</script>
+  </script>
 </body>
+
 </html>
