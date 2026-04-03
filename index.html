@@ -377,6 +377,15 @@
       margin-top: 0.25rem;
     }
 
+    .hero-poster-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 0.8rem 1rem 0.1rem;
+      border-top: 1px solid var(--border-lt);
+      margin-top: 0.35rem;
+    }
+
     /* ─── ABOUT ────────────────────────────────────────────────────── */
     #about {
       background: var(--surface);
@@ -915,10 +924,6 @@
       color: var(--ink-2);
       line-height: 1.6;
       margin-bottom: 1rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
 
     .speaker-footer {
@@ -1308,7 +1313,7 @@
             </div>
             <div class="hero-meta-item">
               <i class="fa-regular fa-clock"></i>
-              <span>10:00 AM – 4:30 PM (IST), both days</span>
+              <span>Day 1: 9:45 AM - 5:30 PM · Day 2: 10:00 AM - 6:00 PM (IST)</span>
             </div>
             <div class="hero-meta-item">
               <i class="fa-solid fa-location-dot"></i>
@@ -1342,6 +1347,7 @@
                   <div class="hero-stat-label">Attendees</div>
                 </div>
               </div>
+              <div class="hero-poster-note">Updated timings: Day 1 9:45 AM - 5:30 PM · Day 2 10:00 AM - 6:00 PM</div>
             </div>
           </div>
         </div>
@@ -1543,6 +1549,8 @@
               <td class="sched-time">11:30 AM - 12:00 PM</td>
               <td>
                 <div class="sched-event-name">Student Presentations (2 talks; 15 mins each)</div>
+                <div class="sched-event-sub">Student Presenter: Samyak</div>
+                <div class="sched-event-sub">Student Presenter: Poojan</div>
               </td>
               <td class="sched-venue">LH114</td>
             </tr>
@@ -1578,6 +1586,10 @@
               <td class="sched-time">3:30 PM - 4:30 PM</td>
               <td>
                 <div class="sched-event-name">Student Presentations (4 talks; 15 mins each)</div>
+                <div class="sched-event-sub">Student Presenter: Abdul</div>
+                <div class="sched-event-sub">Student Presenter: Pankaj</div>
+                <div class="sched-event-sub">Student Presenter: Phaneesh</div>
+                <div class="sched-event-sub">Student Presenter: Raaginee</div>
               </td>
               <td class="sched-venue">LH114</td>
             </tr>
@@ -1653,26 +1665,24 @@
               <td class="sched-venue">LH114</td>
             </tr>
             <tr>
-              <td class="sched-time">3:00 PM - 4:00 PM</td>
+              <td class="sched-time">3:00 PM - 4:45 PM</td>
               <td>
                 <div class="sched-event-name">Student Presentations</div>
-                <div class="sched-event-sub">4 talks · 15 mins each</div>
+                <div class="sched-event-sub">5 talks · 15 mins each</div>
+                <div class="sched-event-sub">Student Presenter: Avilasha</div>
+                <div class="sched-event-sub">Student Presenter: Spandan</div>
+                <div class="sched-event-sub">Student Presenter: Serene</div>
+                <div class="sched-event-sub">Student Presenter: Joydeep</div>
+                <div class="sched-event-sub">Student Presenter: Abhishek</div>
               </td>
               <td class="sched-venue">LH114</td>
             </tr>
             <tr>
-              <td class="sched-time">4:00 PM - 4:30 PM</td>
+              <td class="sched-time">4:45 PM - 6:00 PM</td>
               <td>
                 <div class="sched-event-name">Coffee Break + Posters</div>
               </td>
               <td class="sched-venue">LH114 Foyer</td>
-            </tr>
-            <tr>
-              <td class="sched-time">4:30 PM - 6:00 PM</td>
-              <td>
-                <div class="sched-event-name">Quiz + Closing</div>
-              </td>
-              <td class="sched-venue">LH114</td>
             </tr>
           </tbody>
         </table>
@@ -1697,8 +1707,7 @@
           <div class="speaker-body">
             <div class="speaker-name">Dr. Arkaprava Basu</div>
             <div class="speaker-title">Associate Professor, IISc Bengaluru</div>
-            <div class="speaker-bio">Leads the Computer Systems Lab at IISc; works on memory management across OS and
-              architecture boundaries (GPU/CPU), software reliability, and security.</div>
+            <div class="speaker-bio">Leads the Computer Systems Lab at IISc, focusing on memory systems, reliability, and security across CPU and GPU platforms.</div>
             <div class="speaker-footer">
               <span class="speaker-domain sys">Systems &amp; Security</span>
             </div>
@@ -1712,16 +1721,14 @@
           <div class="speaker-body">
             <div class="speaker-name">Dr. Chetan Arora</div>
             <div class="speaker-title">Professor, CSE, IIT Delhi</div>
-            <div class="speaker-bio">Professor at CSE, IIT Delhi, and joint faculty at Yardi School of AI and ANSK School of
-              IT. Research focus includes Trustworthy AI, Indian population-specific Cancer Detection, mobility systems,
-              and egocentric vision.</div>
+            <div class="speaker-bio">Works on trustworthy AI, vision, and mobility systems, including healthcare applications tailored to Indian populations.</div>
             <div class="speaker-footer">
               <span class="speaker-domain ai">Artificial Intelligence &amp; Machine Learning</span>
             </div>
           </div>
         </a>
 
-        <a href="https://www.cse.iitd.ac.in/~venkata/" target="_blank" class="speaker-card">
+        <a href="https://web.iitd.ac.in/~kvenkata/" target="_blank" class="speaker-card">
           <div class="speaker-img-wrap">
             <img src="kvenkata.jpg" alt="Venkata Koppula" class="no-crop" />
             <div class="speaker-track-bar theory"></div>
@@ -1729,9 +1736,7 @@
           <div class="speaker-body">
             <div class="speaker-name">Dr. Venkata Koppula</div>
             <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
-            <div class="speaker-bio">Assistant Professor at CSE, IIT Delhi. Previously a postdoc at the Weizmann
-              Institute of Science and obtained his Ph.D. from UT Austin. His research interests lie in the area of
-              theoretical cryptography.</div>
+            <div class="speaker-bio">Researches theoretical cryptography, with prior work at the Weizmann Institute and doctoral training at UT Austin.</div>
             <div class="speaker-footer">
               <span class="speaker-domain theory">Theory &amp; Algorithms</span>
             </div>
@@ -1741,15 +1746,14 @@
         <a href="https://iitgn.ac.in/faculty/cse/fac-jyothi" target="_blank" class="speaker-card">
           <div class="speaker-img-wrap">
             <img src="jyothi.jpg" alt="Jyothi Krishnan" />
-            <div class="speaker-track-bar hci"></div>
+            <div class="speaker-track-bar theory"></div>
           </div>
           <div class="speaker-body">
             <div class="speaker-name">Dr. Jyothi Krishnan</div>
             <div class="speaker-title">Assistant Teaching Professor, CSE, IIT Gandhinagar</div>
-            <div class="speaker-bio">Works at the intersection of mathematics education and game design, with interests
-              in mathematical games, board games, and school mathematics through games.</div>
+            <div class="speaker-bio">Explores mathematics education through game design, especially classroom-ready mathematical and board game experiences.</div>
             <div class="speaker-footer">
-              <span class="speaker-domain hci">Human-Computer Interaction</span>
+              <span class="speaker-domain theory">Theory &amp; Algorithms</span>
             </div>
           </div>
         </a>
@@ -1762,8 +1766,7 @@
           <div class="speaker-body">
             <div class="speaker-name">Dr. Abhilash Jindal</div>
             <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
-            <div class="speaker-bio">Broadly interested in systems, with research spanning system design, performance,
-              and energy-aware computing.</div>
+            <div class="speaker-bio">Works on computer systems with emphasis on architecture, performance, and energy-efficient design.</div>
             <div class="speaker-footer">
               <span class="speaker-domain sys">Systems &amp; Security</span>
             </div>
@@ -1778,8 +1781,7 @@
           <div class="speaker-body">
             <div class="speaker-name">Dr. Vaishnavi Sundararajan</div>
             <div class="speaker-title">Assistant Professor, CSE, IIT Delhi</div>
-            <div class="speaker-bio">Works on applying formal methods and logic to security, including formal modeling
-              and verification of security protocols.</div>
+            <div class="speaker-bio">Applies formal methods and logic to security, including rigorous modeling and verification of protocols.</div>
             <div class="speaker-footer">
               <span class="speaker-domain theory">Theory &amp; Algorithms</span>
             </div>
@@ -1794,8 +1796,7 @@
           <div class="speaker-body">
             <div class="speaker-name">Dr. Kolin Paul</div>
             <div class="speaker-title">Professor, Computer Science and Engineering, IIT Delhi</div>
-            <div class="speaker-bio">Research focuses on embedded heterogeneous systems (GPU/CPU/FPGA), high-performance
-              accelerators for HPC, cyber-physical systems security, and quantum computing.</div>
+            <div class="speaker-bio">Research spans embedded heterogeneous systems, HPC accelerators, cyber-physical security, and quantum computing.</div>
             <div class="speaker-footer">
               <span class="speaker-domain sys">Systems &amp; Security</span>
             </div>
@@ -1810,8 +1811,7 @@
           <div class="speaker-body">
             <div class="speaker-name">Dr. Sorav Bansal</div>
             <div class="speaker-title">Professor, Department of Computer Science, IIT Delhi</div>
-            <div class="speaker-bio">Works on program superoptimization and AI-based compiler optimization; currently on
-              long leave from IIT Delhi working on compiler optimization at Graviton Research Capital.</div>
+            <div class="speaker-bio">Works on program superoptimization and AI-driven compiler optimization, with current industry research at Graviton.</div>
             <div class="speaker-footer">
               <span class="speaker-domain sys">Systems &amp; Security</span>
             </div>
